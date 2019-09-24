@@ -82,12 +82,12 @@
     //表单显示
         $(document).ready(function(){
             $("#reg").click(function () {
-            $("#regform").fadeIn("slow");
-                $("#logform").fadeOut("slow");
+            $("#regform").animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+                $("#logform").animate({height: 'toggle', opacity: 'toggle'}, 'slow');
         });
              $("#log").click(function () {
-            $("#logform").fadeIn("slow");
-                 $("#regform").fadeOut("slow");
+            $("#logform").animate({height: 'toggle', opacity: 'toggle'}, 'slow');
+                 $("#regform").animate({height: 'toggle', opacity: 'toggle'}, 'slow');
         });
         });
    /* function reg() {
