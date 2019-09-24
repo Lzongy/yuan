@@ -32,7 +32,7 @@
                 <a href="psd_alter.html"><button type="button">忘记密码</button></a></li>
             </form>
             <div class="change" style="font-size: 15px">
-                <p><img src="img/icons/yiwen.png" height="25" width="25"/>还没账号?先<a href="#" onclick="reg()">注册</a>吧</p>
+                <p><img src="img/icons/yiwen.png" height="25" width="25"/>还没账号?先<a href="#" id="reg">注册</a>吧</p>
             </div>
     </div>
     </div>
@@ -61,7 +61,7 @@
                 <li> <input type="submit" value="注册"><input type="reset" value="清空"></li>
                 </form>
                 <div class="change">
-                    <p><img src="img/icons/yiwen.png" height="25" width="25"/>注册完成！去<a href="#" onclick="log()">登录</a>吧</p>
+                    <p><img src="img/icons/yiwen.png" height="25" width="25"/>注册完成！去<a href="#" id="log">登录</a>吧</p>
                 </div>
     </div>
         </div>
@@ -80,7 +80,17 @@
 
 <script>{
     //表单显示
-    function reg() {
+        $(document).ready(function(){
+            $("#reg").click(function () {
+            $("#regform").fadeIn("slow");
+                $("#logform").fadeOut("slow");
+        });
+             $("#log").click(function () {
+            $("#logform").fadeOut("slow");
+                 $("#regform").fadeOut("slow");
+        });
+        });
+   /* function reg() {
         document.getElementById('regform').style.display="";
         document.getElementById('logform').style.display="none";
     }
@@ -88,6 +98,6 @@
         document.getElementById('regform').style.display="none";
         document.getElementById('logform').style.display="";
     }
-}
+} */
 </script>
 </html>
