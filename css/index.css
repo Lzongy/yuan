@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+
+nav{
+	width: 100%;
+	height: 5%;
+}
+nav ul{
+	top:0;
+}
+nav li{
+	list-style-type: none;
+	display: inline;
+}
+nav li a {
+	font-size: 20px;
+	text-decoration: none;
+	float: right;
+	margin:0 10px;
+	border-radius:10px ;
+	color:#6495ED;
+}
+nav li a:hover{
+	background-color: cornflowerblue;
+	color:white;
+}
+/*首页预览*/
+.header{
+	background-image: url(../img/background/main_background1.png);
+	overflow: hidden;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 500px;
+	margin:0;
+	padding: 0;
+	display: inline-block;
+}
+.special{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin: 50px auto;
+}
+.spe_items{
+	border: 1px solid #6495ED;
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+	margin: 0 150px;
+	position: relative;
+	transition: all 0.5s;
+}
+.spe_items img{
+	width: 170px;
+	height: 150px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.pic_desc{
+	width: auto;
+	height: auto;
+	color: white;
+	background: #6495ED;
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.spe_items:hover{
+	transform:translate(calc(-10% + 5px), calc(-10% - 5px));
+	box-shadow:-10px 10px 0 rgba(0,0,0,0.2);
+}
+/*关于我们*/
+.intro{
+	width: 100%;
+	height: auto;
+	display: flex;
+	display: -webkit-flex;
+	margin: 20px auto;
+}
+.about_info{
+	width: 40%;
+	height: auto;
+	margin: 0 20px;
+	color: #6495ED;
+	font-size: 16px;
+}
+.about_info p ,li{
+	font-size: 17px;
+	margin: 10px 0;
+}
+.log button{
+	width:260px;
+	height: 60px;
+	border-radius: 9px;
+	border: 1px solid #6495ED;
+	font-size: 20px;
+	font-family: Kaiti;
+	background-color: #00000000;
+	margin: 20px 100px;
+	color: #6495ED;
+}
+.log button:hover{
+	border-color: white;
+	cursor: pointer;
+	background: #6495ED;
+	color: white;
+}
+/*底部链接*/
+footer a{
+	text-decoration: none;
+	font-size:16px;
+}
+footer a:hover{
+	color: gray;
+}
+/*底部链接图标*/
+footer span{
+	margin: 0 4px;
+}
+.link_icon{
+	width:16px;
+	height: 16px;
+}

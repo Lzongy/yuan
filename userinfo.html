@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        //返回顶部
+        $(function(){
+            //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+            $(function () {
+                $(window).scroll(function(){
+                    if ($(window).scrollTop()>100){
+                        $("#toTop").fadeIn(1500);
+                    }
+                    else
+                    {
+                        $("#toTop").fadeOut(1500);
+                    }
+                });
+                //当点击跳转链接后，回到页面顶部位置
+                $("#toTop").click(function(){
+                    $('body,html').animate({scrollTop:0},1000);
+                    return false;
+                });
+            });
+        });
+        //问候语
+        window.onload=function () {
+            var now=new Date(),hours=now.getHours();
+            if(hours>0 && hours<6){
+                document.getElementById('helo').innerText="凌晨要多休息会";
+            }else if (hours>=6 && hours<11){
+                document.getElementById('helo').innerText="今天也是元气满满的一天";
+            }else if(hours>=11 && hours<13){
+                document.getElementById('helo').innerText="中午好，午饭要吃饱";
+            }else if(hours>=13 && hours<18){
+                document.getElementById('helo').innerText="下午好哟";
+            }else if(hours>=18 && hours<23){
+                document.getElementById('helo').innerText="晚上好呀，娱乐一会吧";
+            }else {
+                document.getElementById('helo').innerText="辛苦一天好好休息";
+            }
+        }
+    </script>
+    <title>个人中心</title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li style="font-size: 23px;color: #6CA6CD"><img src="img/icons/pro_logo.png" height="40" width="40"/>个人中心</li>
+        <li class="nav_right"><a href="#" id="userout" onclick="logout()">注销账号</a></li>
+        <li class="nav_right"><a href="php/userout.php">退出登录</a></li>
+        <li class="nav_right"><i id="helo" style="color: orange;font-size: large;margin: 0 10px"></i></li>
+    </ul>
+</nav>
+<!-- 个人中心 -->
+<div class="user_pic" >
+    <div class="avatar">
+        <img src="img/icons/log_head.png" width="100" height="100"/>
+        <p id="user" style="background: #00000000;font-size: 19px;"></p>
+        <p  style="background: #00000000">个人简介：<span id="introduction" style="background: #00000000;color: darkblue"></span>&nbsp;&nbsp;&nbsp;<span><button type="button" class="alter_intro" onclick="alte()" >编辑</button></span></p>
+        <div id="alter intro" style="display: none">
+            <form action="php/upintro.php" method="post">
+            <input type="text" name="introduction" style="border-radius: 9px;border:1px solid white;background: #00000000" />
+            <input type="submit" value="修改"  style="width: 50px;height: 20px;font-size: 13px">
+            <input type="button" value="取消" onclick="fin()" style="width: 50px;height: 20px;font-size: 13px;border: 1px;border-radius: 9px;background: white">
+        </form>
+        </div>
+    </div>
+</div>
+<div class="moving">
+    <div class="left_bar">
+        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white ">功能项</div>
+        <div class="left_item"style="width: 85%;height: 30px;background: #accbee;margin: 15px auto;font-size: 18px;text-align: center;">
+        <a href="#" style="color: white;text-decoration: none;background: #00000000">个人动态</a></div>
+        <div class="left_items"><a href="wishes.html">Wishes-愿望</a></div>
+        <div class="left_items"><a href="info_alter.html">个人资料修改</a></div>
+        <div class="left_items"><a href="psd_alter.html">密码修改</a></div>
+        <div class="left_items"><a href="#" id="userfree" onclick="freed()">发泄会儿</a></div>
+        <div class="left_items"><a href=" https://www.facebook.com">Facebook</a></div>
+        <div class="left_items"><a href=" https://twitter.com">Twitter</a></div>
+        <div class="left_items"><a href=" https://weibo.com">Weibo</a></div>
+        <div class="left_items"><a href=" https://qzone.qq.com">QZone</a></div>
+        <div class="left_items"><a href="#" id="userfeed" onclick="advice()">信息反馈</a></div>
+    </div>
+    <div class="contain">
+        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white">树洞</div>
+        <form action="php/usermoving.php" method="post">
+        <textarea maxlength="1000" rows="5" placeholder="碰到什么有趣的事吗？说点什么吧～" name="moving"></textarea>
+        <div class="btn" style="float: right"> <input type="submit" name="submit" value="发布"><input type="reset" name="reset" value="清空"></div>
+        </form>
+        <div class="moving_items">
+            <!-- 返回顶部按钮 -->
+            <div class="top" >
+                <a href="javascript:void(0)" id="toTop" style="display: block;">
+                    <img src="img/icons/back_top.png" height="50px" width="40px">
+                </a>
+            </div>
+
+            <!-- 动态展示-->
+            <div class="user_comments" id="movings">
+                <h2 style="color:grey">我的动态 > ></h2>
+                <hr size="1" width="100%" color="white"><br>
+            </div>
+    </div>
+    </div>
+</div>
+<footer>
+    <hr size="1" color="#808080" width="100%">
+    <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com&nbsp;&nbsp;｜&nbsp;&nbsp;<span id="pagecount" ></span></p>
+</footer>
+
+<!-- 注销 -->
+<div id="hidebg"></div>
+<div class="logout" id="logout" style="display: none">
+        <p style="color: white">账号注销</p>
+        <p class="desc"><span>**注意：为防止恶意操作请输入有效账号邮箱**</span></p>
+    <div class="outform">
+        <form action="php/logout.php" method="post">
+            <li><label>*邮箱：</label><input type="email" name="email" required></li>
+            <li><input type="submit" value="注销"><button type="button" id="cel" onclick="cancelbtn()">留下</button></li>
+        </form>
+    </div>
+</div>
+
+<!-- 建议反馈 -->
+<div id="feedback" style="display: none;">
+    <div class="close" >
+        <span>*向我们反馈</span> <img src="img/icons/close_btn.png" width="25" height="25" id="celimg" onclick="BtnClose()"/> </div>
+    <div class="advice_form">
+        <form action="php/feedback.php" method="post">
+            <textarea  class="feedtext" rows="5" maxlength="350" name="feedback"></textarea>
+            <p style="font-size: 12px;color:white">*将以匿名的方式提交</p>
+            <input type="submit" value="提交"> <input type="reset" value="清除">
+        </form>
+    </div>
+</div>
+
+<!-- 发泄元素 -->
+<div id="freed" style="display: none">
+    <div class="free">
+        <h3 align="center">发泄出来</h3>
+        <p class="freetitle">!发泄就完事儿了,对什么有不满的，放肆说</p>
+        <textarea cols="9" rows="7" maxlength="1000" id="freetext" placeholder="请说.."></textarea>
+        <button type="button" class="freebtn" id="celfree" onclick="freedbtn()">释放出去</button>
+        <p class="freetip">*注意：👤保护个人隐私，我们坚决不会泄漏您的言行，在发布后，数据将自行清空</p>
+    </div>
+</div>
+</body>
+<script>
+    //编辑简介
+    function alte() {
+        document.getElementById('alter intro').style.display="";
+    }
+    function fin() {
+        document.getElementById('alter intro').style.display="none";
+    }
+
+    //记录访问
+        if(sessionStorage.pagecount){
+            sessionStorage.pagecount=Number(sessionStorage.pagecount)+1;
+        }else{
+            sessionStorage.pagecount=1;
+        }
+        document.getElementById('pagecount').innerText="今天是第"+sessionStorage.pagecount+"次来这儿了";
+
+    //注销用户
+    $(document).ready(function(){
+        $("#userout").click(function () {
+            $("#logout").fadeIn("slow");
+        });
+        $("#cel").click(function () {
+            $("#logout").fadeOut("slow");
+        })
+    });
+    function logout() {
+        var hideobj=document.getElementById("hidebg");
+        hidebg.style.display="block";
+        hidebg.style.height=document.body.clientHeight+"px";
+    }
+    function  cancelbtn() {
+        document.getElementById('hidebg').style.display="none";
+    }
+
+    //反馈功能
+    $(document).ready(function(){
+        $("#userfeed").click(function () {
+            $("#feedback").fadeIn("slow");
+        });
+        $("#celimg").click(function () {
+            $("#feedback").fadeOut("slow");
+        })
+    });
+
+    function advice(){
+            var hideobj=document.getElementById("hidebg");
+            hidebg.style.display="block";
+            hidebg.style.height=document.body.clientHeight+"px";
+        }
+        function  BtnClose() {
+            document.getElementById('hidebg').style.display="none";
+        }
+
+        //发泄元素
+    $(document).ready(function(){
+        $("#userfree").click(function () {
+            $("#freed").fadeIn("slow");
+        });
+        $("#celfree").click(function () {
+            $("#freed").fadeOut("slow");
+        })
+    });
+
+    function freed(){
+        var hideobj=document.getElementById("hidebg");
+        hidebg.style.display="block";
+        hidebg.style.height=document.body.clientHeight+"px";
+    }
+    function freedbtn(){
+        $('#freetext').val("");
+        alert("自己开心才是最重要的呢🔅");
+        document.getElementById('hidebg').style.display="none";
+    }
+
+        //昵称简介展示
+    $.ajax({
+        url:'php/nick.php',
+        dataType:'json',
+        type:'post',
+        success:function (msg) {
+            var str="<span>";
+            var str2="<span>";
+            $.each(msg,function(i,n){
+                str+="<span>"+""+n.nickname+"</span>";
+                str2+="<span>"+""+n.introduction+"</span>";
+            });
+            str+="</span>";
+            str2+="</span>";
+            $("#user").append(str);
+            $("#introduction").append(str2);
+        }
+    })
+
+    //动态展示
+    $.ajax({
+        url:'php/movingselect.php',
+        dataType: 'json',
+        type: 'post',
+        success:function (data) {
+            var strings="<span>";
+            $.each(data,function (i,n) {
+                strings+="<li style='font-size: 18px;color: darkblue'>"+""+n.moving+"</li>";
+                strings+="<br>";
+                strings+="<span style='font-size: 15px;color: white;float:right;'>"+"发布于："+n.publishtime+"</span>";
+                strings+="<a href='php/delmoving.php'><button type='button' class='delbtn'>"+"删除"+"</button></a>"
+
+            });
+            strings+="</span>";
+            $("#movings").append(strings);
+        }
+    })
+</script>
+</html>

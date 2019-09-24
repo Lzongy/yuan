@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>wish-愿望</title>
+    <script src="js/vue.js"></script>
+    <link href="css/wishes.css" rel="stylesheet" type="text/css" />
+    <script>
+        //问候语
+        window.onload=function () {
+            var now=new Date(),hours=now.getHours();
+            if(hours>0 && hours<6){
+                document.getElementById('helo').innerText="凌晨要多休息会";
+            }else if (hours>=6 && hours<11){
+                document.getElementById('helo').innerText="今天也是元气满满的一天";
+            }else if(hours>=11 && hours<13){
+                document.getElementById('helo').innerText="中午好，午饭要吃饱";
+            }else if(hours>=13 && hours<18){
+                document.getElementById('helo').innerText="下午好哟";
+            }else if(hours>=18 && hours<23){
+                document.getElementById('helo').innerText="晚上好呀，娱乐一会吧";
+            }else {
+                document.getElementById('helo').innerText="辛苦一天好好休息";
+            }
+        }
+
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li style="font-size: 23px;color: #6CA6CD" ><img src="img/icons/wish.png" height="50" width="50"/>许个愿望</li>
+        <li class="nav_right"><a href="php/userout.php">退出登录</a></li>
+        <li class="nav_right"><a href="userinfo.html">返回主页</a></li>
+        <li class="nav_right"><i id="helo" style="color: orange;font-size: large;margin: 0 10px"></i></li>
+        </ul>
+        </nav>
+<!-- 事项 -->
+<div id="app">
+    <div class="input">
+        <p>输入近期/之后想的事儿吧:<input type="text" v-model="thing">&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>你近期的想法是:<span style="color: coral;font-size: 18px;text-decoration: underline">{{ thing }} </span>
+        <button type="submit"  @click=add() class="insert">列入</button></span>
+        </p>
+    </div>
+<!-- 未完成 -->
+    <div class="notfinish">
+    <h3>想实现的的事儿..</h3>
+        <hr size="2" width="100%" color="darkorange"></br>
+    <ul>
+        <li v-for='(item,index) in todo'>
+            <p><span>{{item}}</span>
+            <button type="submit" @click=finish(index) class="fined">完成</button>
+                <button type="submit" @click=deleteTodo(index) class="crash">移除</button> </p>
+        </li>
+    </ul>
+    </div>
+<!-- 已完成的 -->
+    <div class="finish">
+    <h3>已经实现的事儿..</h3>
+        <hr size="2" width="100%" color="white"></br>
+    <ul>
+        <li v-for='(item,index) in finished'>
+          <p>  <span>{{item}}</span>
+            <button type="submit" @click=changeTodo(index) class="notfin">暂定</button>
+              <button type="submit" @click=deleteFinished(index) class="out">移除</button></p>
+        </li>
+    </ul>
+    </div>
+</div>
+    <footer>
+    <hr size="1" color="#808080" width="100%">
+    <p>友情链接：<span><img src="img/icons/Facebook_icon.png" class="link_icon" /> <a href=" https://www.facebook.com">Facebook</a></span>
+        <span><img src="img/icons/twitter_icon.png" class="link_icon" /> <a href=" https://twitter.com">Twitter</a></span>
+        <span><img src="img/icons/GitHub_icon.png" class="link_icon" /> <a href=" https://github.com">GitHub</a></span>
+        <span><img src="img/icons/weibo_icon.png" class="link_icon" /> <a href=" https://weibo.com">Weibo</a></span>
+        <span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
+    </p> <br>
+    <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com&nbsp;&nbsp;｜&nbsp;&nbsp;<a href="php/version.php" style="color: darkblue;">查看版本</a></p>
+</footer>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            content:"hello vue",
+            thing:'', //v-model绑定
+            todo:[],
+            finished:[]
+        },
+        methods:{
+            // 将input标签里的内容加入到todo(待办事项数组)
+            add(){
+                this.todo.push(this.thing);
+                this.thing='';
+            },
+            // 将待办事项里完成的加入到finished(完成事项数组)
+            finish(index){
+                this.finished.push(this.todo[index]);
+                this.todo.splice(index,1);
+            },
+            // 将完成事项改成待办事项
+            changeTodo(index){
+                this.todo.push(this.finished[index]);
+                this.finished.splice(index,1);
+            },
+            // 对待办事项删除
+            deleteTodo(index){
+                this.todo.splice(index,1);
+            },
+            // 对完成事项删除
+            deleteFinished(index){
+                this.finished.splice(index,1);
+            }
+        }
+    })
+</script>
+</html>

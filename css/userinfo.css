@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+nav{
+    width: 100%;
+    height: 10%;
+    top:0;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #00000000;
+}
+nav ul li a:hover{
+    background: white;
+    border-radius:9px;
+    color:green;
+
+}
+.nav_right {
+    float: right;
+    margin: 0 5px;
+}
+/*
+动态主体
+*/
+.user_pic{
+    width: 80%;
+    height: 300px;
+    margin: 15px auto;
+    background-image: url("../img/background/user_pic.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.avatar{
+    width: 100%;
+    height: 200px;
+    margin: 50px auto;
+    background: #00000000;
+    text-align: center;
+}
+.avatar img{
+    width: 100px;
+    height: 100px;
+    border:1px solid #6495ED;
+    border-radius: 50%;
+    background: #00000000;
+
+}
+.alter_intro{
+    width: 40px;
+    height: 20px;
+    border:1px;
+    border-radius: 9px;
+    background: darkgrey;
+    color: white;
+    cursor: pointer;
+}
+.alter_intro:hover{
+    background: orange;
+}
+.moving{
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto;
+    display: flex;
+    display: -webkit-flex;
+}
+.left_bar{
+    width: 30%;
+    height:100% ;
+    margin-right:5px;
+}
+.contain{
+    width: 70%;
+    height: 100%;
+    margin-left: 5px;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    border:1px solid #6495ED;
+    font-size: 15px;
+    background: #00000000;
+}
+.btn input[type=submit],[type=reset]{
+    width:75px;
+    height: 30px;
+    border-radius: 7px;
+    border:1px;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px 10px;
+    background: white;
+}
+input[type=submit]:hover{
+    background: #6495ED;
+    color: white;
+    cursor: pointer;
+}
+input[type=reset]:hover{
+    background: #6495ED;
+    color: white;
+    cursor: pointer;
+}
+.left_items{
+    width: 85%;
+    height: 30px;
+    background: #accbee;
+    margin: 15px auto;
+    font-size: 18px;
+    text-align: center;
+}
+.left_items a{
+    text-decoration: none;
+    background: #00000000;
+    color: darkblue;
+}
+.left_items:hover{
+    background: cornflowerblue;
+}
+.user_comments{
+    width: 100%;
+    height: auto;
+    margin: 100px auto;
+}
+.moving_items{
+    margin:30px auto;
+}
+.moving_items table{
+    width: 100%;
+    height: auto;
+}
+.moving_items table td{
+    margin: 10px auto;
+}
+ .name{
+    width: 10%;
+    height: 30px;
+    background: #6495ED;
+    color: white;
+    margin-bottom: 5px ;
+    font-size: 17px;
+}
+.moving_items .usercontain{
+    width: 100%;
+    height: 90%;
+    background: #accbee;
+}
+.moving_items .delete{
+    width: 50px;
+    height: 25px;
+    float: right;
+    background: white;
+    border-radius: 7px;
+    color:#6495ED;
+    font-size: 13px;
+    border: 1px solid white;
+}
+.top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+#hidebg {
+    position:absolute;
+    left:0;
+    top:0;
+    background-color:#000;
+    width:100%;
+    filter:alpha(opacity=60);
+    opacity:0.6;
+    z-Index:1;
+    display: none;
+}
+.logout{
+    width: 30%;
+    height: 200px;
+    border-radius: 9px;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99;
+    position: fixed;
+    text-align: center;
+    background: #6495ED;
+    font-size: 15px;
+}
+.logout p{
+    font-size: 20px;
+    text-align: center;
+}
+.logout span{
+    color: red;
+    font-size: 13px;
+}
+
+.logout input[type=text],[type=email]{
+    width: 170px;
+    height: 25px;
+    border:1px ;
+    border-radius: 9px;
+    margin: 20px 10px;
+}
+.logout li{
+    list-style-type:none;
+    margin: 10px 5px;
+}
+.logout input[type=submit]{
+    width: 75px;
+    height: 30px;
+    background: white;
+    border: 1px;
+    color: #6495ED;
+    border-radius: 7px;
+    font-size: 15px;
+    margin: 10px 5px;
+}
+.logout button{
+    width: 75px;
+    height: 30px;
+    background: white;
+    color: #6495ED; !important;
+    border: 1px;
+    border-radius: 7px;
+    font-size: 15px;
+    margin: 5px 5px;
+}
+.logout button:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 6px 3px  lightgreen;
+}
+input{
+    font-size: 15px;
+}
+.logout input[type=text]:hover{
+    box-shadow: 1px 2px 6px 3px  lightgreen;
+}
+.logout input[type=email]:hover{
+    box-shadow: 1px 2px 6px 3px  lightgreen;
+}
+.logout input[type=submit]:hover{
+    box-shadow: 1px 2px 6px 3px  red;
+    color: red;
+}
+/*反馈表单*/
+#feedback{
+    width:30%;
+    height:250px;
+    border:1px solid white;
+    border-radius: 7px;
+    text-align: center;
+    z-index: 99;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    background: #6495ED;
+    position:fixed;
+}
+input[type="submit"],[type="reset"]{
+    width:75px;
+    height: 30px;
+    border-radius: 7px;
+    border:1px;
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0;
+    background: white;
+}
+#feedback textarea{
+    font-size: 13px;
+    border-radius: 9px;
+    border:1px solid white;
+    margin: 15px auto;
+    width: 55%;
+    height: 50%;
+    background: white;
+}
+.close{
+    width: 100%;
+    height:40px;
+    border-top-left-radius:7px ;
+    border-top-right-radius:7px ;
+}
+.close span{
+    font-size: 20px;
+    text-align: center;
+    top:10px;
+}
+.close img{
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+/* 动态删除按钮 */
+.delbtn{
+    border: 1px;
+    border-radius: 9px;
+    background: white;
+    font-size: 13px;
+    width: 50px;
+    height: 20px;
+}
+.delbtn:hover{
+    box-shadow: 1px 1px 2px 1px red;
+    cursor: pointer;
+    color: red;
+}
+/* 发泄元素*/
+#freed{
+    width: 550px;
+    height: 300px;
+    border: 1px;
+    border-radius: 9px;
+    background: #6495ED;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+}
+.free textarea{
+    border-radius: 9px;
+    border: 1px solid white;
+    font-size: 15px;
+    margin: 10px auto;
+    width: 80%;
+    height: auto;
+}
+.freetitle{
+    margin: 10px 0;
+    color: #accbee;
+}
+.freetip{
+    color: red;
+    font-size: 14px;
+    margin-top:40px ;
+}
+.freebtn{
+    width: 85px;
+    height: 25px;
+    background: white;
+    border: 1px;
+    border-radius: 9px;
+    font-size: 15px;
+    color: #6495ED;
+}
+.freebtn:hover{
+    cursor: pointer;
+    color: lightgreen;
+}

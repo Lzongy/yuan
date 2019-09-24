@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>照片集</title>
+    <link href="css/pic.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<nav>
+    <ul>
+    <li style="font-size: 23px;color:#6CA6CD"><img src="img/icons/moving_pic.png" height="45" width="45" style="top:5px"/>照片集</li>
+    <li class="nav_right"><a href="index.html">退出登录</a></li>
+    <li class="nav_right"><a href="square.html">返回广场</a></li>
+    <li class="nav_right"><a href="userinfo.html">我的动态</a></li>
+    </ul>
+</nav>
+<div class="pic_contain">
+    <button type="button" value="生活速记" onclick="upic()" class="upbtn">生活速记</button>
+    <table  cellspacing="0" width="100%" height="auto">
+        <tr>
+            <td></td> <td></td> <td></td> <td></td>
+        </tr>
+    </table>
+</div>
+<footer>
+    <hr size="1" color="#808080" width="100%">
+    <p>友情链接：<span><img src="img/icons/Facebook_icon.png" class="link_icon" /> <a href=" https://www.facebook.com">Facebook</a></span>
+        <span><img src="img/icons/twitter_icon.png" class="link_icon" /> <a href=" https://twitter.com">Twitter</a></span>
+        <span><img src="img/icons/GitHub_icon.png" class="link_icon" /> <a href=" https://github.com">GitHub</a></span>
+        <span><img src="img/icons/weibo_icon.png" class="link_icon" /> <a href=" https://weibo.com">Weibo</a></span>
+        <span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
+    </p> <br>
+    <p align="center">Copyright© 2019 无望/Hopeless 个人社交&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com&nbsp;&nbsp;｜&nbsp;&nbsp;<a href="php/version.php" style="color: darkblue;">查看版本</a></p>
+</footer>
+
+<!-- 图片上传 -->
+<div id="hidebg"></div>
+<div id="up" class="upic" style="background: #6495ED;display: none">
+    <p >选择开始上传<span><img src="img/icons/close_btn.png" height="25" width="25" style="float: right;background:#6495ED" onclick="closebtn()"/></span></p>
+    <form name="form1" method="post" action="php/upload_pic.php" enctype="multipart/form-data">
+        <li style="background:#6495ED;list-style-type: none;font-size: 15px">文件选择：<input type="file" name="photo" accept="image/gif,image/jpeg,image/x-png，image/jpg,image/png"></li>
+        <p><input type="hidden" name="action" value="add"><input type="submit" name="b1" value="提交"></p>
+    </form>
+</div>
+<script>
+    function upic() {
+        var hideobj=document.getElementById("hidebg");
+        hidebg.style.display="block";
+        //显示隐藏层
+        hidebg.style.height=document.body.clientHeight+"px";
+        //设置隐藏层的高度为当前页面高度
+        document.getElementById('up').style.display="";
+        //显示弹出层
+    }
+    function closebtn() {
+        document.getElementById('up').style.display="none";
+        document.getElementById('hidebg').style.display="none";
+    }
+    </script>
+</body>
+</html>

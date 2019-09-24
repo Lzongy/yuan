@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+nav{
+    width: 100%;
+    height: 10%;
+    top:0;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #00000000;
+}
+nav ul li a:hover{
+    background: white;
+    border-radius:9px;
+    color:green;
+
+}
+.nav_right {
+    float: right;
+    margin: 0 5px;
+}
+#app{
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.input{
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    font-family: Kaiti;
+}
+.input input[type=text]{
+    width: 350px;
+    height: 25px;
+    border: 1px;
+    border-radius: 9px;
+    margin: 0 10px;
+}
+button{
+    width: 85px;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px;
+    margin: 0 5px;
+    background: white;
+}
+.notfinish{
+    width: 46%;
+    height: 500px;
+    border: 1px;
+    border-radius: 8px;
+    margin: 5px 20px;
+    background: beige;
+    color: orange;
+    transition: all 1s;
+    position: relative;
+}
+.finish{
+    width: 46%;
+    height: 500px;
+    border: 1px ;
+    border-radius: 8px;
+    margin: 5px 20px;
+    background: #accbee;
+    color: cornflowerblue;
+    transition: all 1s;
+    position: relative;
+}
+ul li{
+    list-style-type: none;
+}
+/* button hover*/
+.insert:hover{
+    background: lightgreen;
+    color: white;
+    box-shadow: 2px 2px 3px cornflowerblue;
+}
+.fined:hover{
+    background: lightgreen;
+    color: white;
+    box-shadow: 2px 2px 3px cornflowerblue;
+}
+.notfin:hover{
+    background: cornflowerblue;
+    color: white;
+    box-shadow: 2px 2px 3px white;
+}
+.crash:hover{
+    background: lightcoral;
+    color: white;
+    box-shadow: 2px 2px 3px white;
+}
+.out:hover{
+    background: lightcoral;
+    color: white;
+    box-shadow: 2px 2px 3px white;
+}
+/* thing hover */
+.notfinish:hover{
+    box-shadow: 10px 10px 4px  lightsalmon;
+}
+.finish:hover{
+    box-shadow: 10px 10px 4px lightgreen;
+}
+/*底部链接*/
+footer a{
+    text-decoration: none;
+    font-size:16px;
+}
+footer a:hover{
+    color: gray;
+}
+/*底部链接图标*/
+footer span{
+    margin: 0 4px;
+}
+.link_icon{
+    width:16px;
+    height: 16px;
+}

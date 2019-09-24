@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>密码修改</title>
+    <link href="css/psd_alter.css" rel="stylesheet" type="text/css">
+    <script>
+        function checkemail() {
+            var email=document.getElementById('email');
+            if(email.value==''){
+                document.getElementById('tips').innerText='**为防止恶意操作，请输入有效邮箱';
+            }
+        }
+        function emfouc() {
+            document.getElementById('tips').innerText='';
+        }
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="logo_title" style="font-size: 22px;color: white"><img src="img/icons/user_info_white.png" height=30 width="30"/>信息修改</li>
+        <li><a href="vistor.html">退出登录</a></li>
+    </ul>
+</nav>
+<div class="psdinfo">
+    <div class="psdtitle">
+        <h2>密码修改</h2>
+        <p style="float: right;color: red;font-size: 13px">*请注意密码格式为6-20位字符，特殊字符仅可以使用*#/-</p>
+    </div>
+    <div class="psd">
+        <form action="php/psdalter.php" method="post">
+        <li><label>*账号ID：&nbsp;&nbsp;&nbsp;</label><input type="text" name="uid" required></li>
+        <li><label>*邮箱地址：</label><input type="email" name="email" id="email" onblur="checkemail()" onfocus="emfouc()" required></li>
+            <p id="tips" style="font-size: 13px;color: red"></p>
+        <li><label>原密码：&nbsp;&nbsp;&nbsp;</label><input type="password" name="oldpsd"></li>
+            <p class="psdesc">**若忘记密码可不填**</p>
+        <li><label>新密码：&nbsp;&nbsp;&nbsp;</label><input type="password" name="password" maxlength="20" minlength="6" required></li>
+        <li><label>确认密码：</label><input type="password" name="checkpsd" maxlength="20" minlength="6" required></li>
+        <li><input type="submit" value="确认修改"><input type="reset" value="清除"><a href="javascript:history.go(-1);"><button type="button">返回上一步</button></a></li>
+        </form>
+    </div>
+</div>
+<footer>
+    <hr size="1" color="#808080" width="100%">
+    <p>友情链接：<span><img src="img/icons/Facebook_icon.png" class="link_icon" /> <a href=" https://www.facebook.com">Facebook</a></span>
+        <span><img src="img/icons/twitter_icon.png" class="link_icon" /> <a href=" https://twitter.com">Twitter</a></span>
+        <span><img src="img/icons/GitHub_icon.png" class="link_icon" /> <a href=" https://github.com">GitHub</a></span>
+        <span><img src="img/icons/weibo_icon.png" class="link_icon" /> <a href=" https://weibo.com">Weibo</a></span>
+        <span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
+    </p> <br>
+    <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+nav{
+    width: 100%;
+    height: 10%;
+    top:0;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #00000000;
+}
+nav ul li a:hover{
+    background: white;
+    border-radius:9px;
+    color:green;
+
+}
+.nav_right{float: right}
+.pic_contain{
+    width: 85%;
+    height: 600px;
+    margin: 30px auto;
+}
+.upbtn{
+    width: 100px;
+    height: 35px;
+    border-radius: 9px;
+    border:1px solid white;
+    background: #6495ED;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+.upbtn:hover{
+    content: " >>";
+    background: white;
+    color: #6495ED;
+    cursor: pointer;
+}
+#hidebg {
+    position:absolute;
+    left:0px;
+    top:0px;
+    background-color:#000;
+    width:100%;
+    filter:alpha(opacity=70);
+    opacity:0.7;
+    z-Index:1;
+    display: none;
+}
+.upic{
+    width: 30%;
+    height: 150px;
+    border: 1px solid white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99;
+    position: fixed;
+    background: #6495ED;
+}
+.upic p{
+    background: #6495ED;
+    text-align: center;
+}
+input[type=file]{
+    border-radius: 7px;
+    background: #6495ED;
+    text-align: center;
+    margin: 20px auto;
+}
+input[type=submit]{
+    width: 80px;
+    height: 25px;
+    border-radius: 7px;
+    background: white;
+    border:1px solid white;
+    text-align: center;
+    font-size: 15px;
+    margin: 20px auto;
+}
+/*底部链接*/
+footer a{
+    text-decoration: none;
+    font-size:16px;
+}
+footer a:hover{
+    color: gray;
+}
+/*底部链接图标*/
+footer span{
+    margin: 0 4px;
+}
+.link_icon{
+    width:16px;
+    height: 16px;
+}

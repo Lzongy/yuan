@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" type="text/css" />
+		<link rel="stylesheet" href="css/feedback_form.css" type="text/css" />
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<title>无望/Hopeless</title>
+	</head>
+	<body>
+	<!--头部文件-->
+		<div class="header" >
+		<nav>
+			<ul>
+			<li><a href="vistor.html">游客访问</a></li>
+			</ul>
+			</nav>
+				</div>
+	<div style="width: 100%;height: auto;display: flex;flex-wrap: wrap">
+		<h2 style="margin-top: 50px;color: #6495ED;font-family: 'Kaiti SC'">树洞社区</h2>
+		<hr size="2" width="100%" color="white">
+		<div class="special">
+					<div class="spe_items">
+						<div class="pic">
+							<img src="img/icons/no-comments.png">
+						</div>
+						<div class="pic_desc">
+							<p>没有评论</p>
+						</div>
+					</div>
+					<div class="spe_items">
+						<div class="pic">
+							<img src="img/icons/no-visit.png">
+						</div>
+						<div class="pic_desc">
+							<p>没有访问</p>
+						</div>
+					</div>
+					<div class="spe_items">
+						<div class="pic">
+							<img src="img/icons/no-like.png">
+						</div>
+						<div class="pic_desc">
+							<p>没有点赞</p>
+						</div>
+					</div>
+				</div>
+				<!--项目简介-->
+		<h2 style="margin-top: 50px;color:#6495ED;font-family: 'Kaiti SC'">关于我们/About us</h2>
+		<hr size="2" width="100%" color="white">
+		<div class="intro">
+					<div class="about_info">
+						<br>
+						<p>随着互联网的发展，人们开始热衷于网络社交</p>
+						<p>他们在网络上认识了各式各样的人，发现了很多有趣的灵魂和好看的皮囊</p>
+						<p>与此同时，工作上的压力和生活上的不尽人意让人开始感到疲倦，无处发泄</p>
+						<p><i><b style="color: white;font-size: 19px;">无望，是一个专注个人的树洞空间</b></i></p>
+						<li>这是树洞，有专属你的私人空间</li>
+						<li>言论自由行为自由（在国家法律允许范围内</li>
+						<li>你可以表达你的私人想法， 是一个完全匿名的社区</li>
+						<li>除了自己，没有任何人知道你发的什么</li>
+						<li>是一个随性的空间，还原最真实的自己</li>
+					</div>
+					<!--logo & button-->
+					<div class="log" style="width:40%;height: auto;flex-wrap: wrap;-webkit-flex-wrap:wrap ;margin:0 80px ;">
+						<div style="width:100%;height:68%;margin: 10px 80px;"><img src="img/icons/about.png" width="90%" height="100%"></div>
+						<div style="width:100%;height:25%;margin: 10px 80px;text-align:center;"><a href="login.html"><button type="button"><b>进入树洞</b></button></a></div>
+						</div>
+					</div>
+	</div>
+	<footer>
+				<hr size="1" color="#808080" width="100%">
+				<p>友情链接：<span><img src="img/icons/Facebook_icon.png" class="link_icon" /> <a href=" https://www.facebook.com">Facebook</a></span>
+				<span><img src="img/icons/twitter_icon.png" class="link_icon" /> <a href=" https://twitter.com">Twitter</a></span>
+				<span><img src="img/icons/GitHub_icon.png" class="link_icon" /> <a href=" https://github.com">GitHub</a></span>
+				<span><img src="img/icons/weibo_icon.png" class="link_icon" /> <a href=" https://weibo.com">Weibo</a></span>
+				<span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
+				</p> <br>
+				<p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com &nbsp;&nbsp;| &nbsp;<a href ="#" id="userfeed" onclick="advice()">反馈建议</a>&nbsp;&nbsp;｜&nbsp;&nbsp;<a href="php/version.php" style="color: darkblue;">查看版本</a></p>
+				</footer>
+
+		<!--feedback-->
+	<div id="hidebg"></div>
+	<div id="feedback" style="display: none;">
+					<div class="close" >
+						<span>*向我们反馈</span> <img src="img/icons/close_btn.png" width="25" height="25" onclick="BtnClose()"/> </div>
+
+						<!--feedback form-->
+						<div class="advice_form">
+					<form action="php/feedback.php" method="post">
+						<textarea rows="5" maxlength="350" name="feedback"></textarea>
+						<p style="font-size: 12px;color:white">*将以匿名的方式提交</p>
+						<input type="submit" value="提交"> <input type="reset" value="清除">
+						</form>
+						</div>
+						</div>
+							<script>
+								$(document).ready(function(){
+									$("#userfeed").click(function () {
+										$("#feedback").fadeIn("slow");
+									});
+								});
+								function advice(){
+								var hideobj=document.getElementById("hidebg");
+								hidebg.style.display="block";
+								//显示隐藏层
+							hidebg.style.height=document.body.clientHeight+"px";
+							//设置隐藏层的高度为当前页面高度
+						}
+						function  BtnClose() {
+                            document.getElementById('feedback').style.display="none";
+							document.getElementById('hidebg').style.display="none";
+						}
+					</script>
+	</body>
+</html>

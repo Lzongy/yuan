@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录&注册</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <script src="js/registerCheck.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="javascript:history.back(-1)"> << 返回上一级 </a></li>
+    </ul>
+</nav>
+<h3 style="text-align: center;font-size: 35px;margin: 0 0 30px 0 ;color:white">欢迎回来</h3>
+
+<!--默认打开登录窗口-->
+
+<div class="formsign">
+    <!--登录表单-->
+    <div id="logform">
+        <div class="log_title"><h3><img src="img/icons/log1.png" height="30" width="30"/>&nbsp;登录</h3></div>
+        <div class="log">
+            <form action="php/userlog.php" method="post" >
+                <li><img src="img/icons/log_head.png" height="100" width="100" style="border-radius: 50%;border:1px solid #c6e2ff;"/></li>
+            <li><label>账号ID：<input type="text" name="uid" id="uid"></label></li>
+            <li><label>密码：&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="pasd" ></label></li>
+            <li> <input type="submit" value="登录" > <input type="reset" value="重置">
+                <a href="psd_alter.html"><button type="button">忘记密码</button></a></li>
+            </form>
+            <div class="change" style="font-size: 15px">
+                <p><img src="img/icons/yiwen.png" height="25" width="25"/>还没账号?先<a href="#" onclick="reg()">注册</a>吧</p>
+            </div>
+    </div>
+    </div>
+    <!--注册表单-->
+        <div id="regform" style="display:none ">
+            <div class="reg_title"><h3><img src="img/icons/reg1.png" height="30" width="30"/>&nbsp;注册</h3></div>
+            <div class="reg">
+                <form action="php/userreg.php" method="post">
+                <li><label>昵称：<input type="text" name="nickname" id="userid" onfocus="idfouc()" onblur="idcheck()" required></label></li>
+                    <p><span id="idErr" style="color:red;font-size: 13px;"></span></p>
+                <li><label>密码：<input type="password" name="password" id="psd" onfocus="psdfouc()" onblur="psdcheck()" maxlength="20" minlength="6" required></label></li>
+                <li class="tip" style="font-size: 13px;list-style-type: none;color:white">*请注意密码格式为6-20位字符，特殊字符仅可以使用*#/-</li>
+                    <p><span id="psdErr" style="color:red;font-size: 13px"></span></p>
+                <li><label>确认密码：<input type="password" name="checkpsd" id="repsd" onfocus="repsdfouc()" onblur="repsdcheck()" required></label></li>
+                    <p><span id="repsdErr" style="color:red;font-size: 13px"></span></p>
+                    <li><label>性别：<input type="radio" name="sex" value="男"><img src="img/icons/boy.png" width="60px" height="60px">
+                        <input type="radio" name="sex" value="女"><img src="img/icons/girl.png" width="60px" height="60px">  </label></li>
+                <li><label>出生年月:<input type="number" name="yrs" min="1970" max="2020">年
+                    <input type="number" name="mon" min="1" max="12">月
+                   <input type="number" name="days" min="1" max="31">日</label></li>
+                    <li> <label>邮箱地址：<input type="email" name="email" id="email" onblur="echeck()" onfocus="efouc()" required></label></li>
+                    <p><span id="emErr" style="color:red;font-size: 13px;"></span></p>
+                    <!--
+                <li> <label>头像选择：<input type="radio" name="user_head" value="男"><img src="img/icons/boy.png" width="60px" height="60px">
+                    <input type="radio" name="user_head" value="女"><img src="img/icons/girl.png" width="60px" height="60px"></label></li> -->
+                <li> <input type="submit" value="注册"><input type="reset" value="清空"></li>
+                </form>
+                <div class="change">
+                    <p><img src="img/icons/yiwen.png" height="25" width="25"/>注册完成！去<a href="#" onclick="log()">登录</a>吧</p>
+                </div>
+    </div>
+        </div>
+</div>
+<footer>
+    <hr size="1" color="#808080" width="100%">
+    <p>友情链接：<span><img src="img/icons/Facebook_icon.png" class="link_icon" /> <a href=" https://www.facebook.com">Facebook</a></span>
+        <span><img src="img/icons/twitter_icon.png" class="link_icon" /> <a href=" https://twitter.com">Twitter</a></span>
+        <span><img src="img/icons/GitHub_icon.png" class="link_icon" /> <a href=" https://github.com">GitHub</a></span>
+        <span><img src="img/icons/weibo_icon.png" class="link_icon" /> <a href=" https://weibo.com">Weibo</a></span>
+        <span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
+    </p> <br>
+    <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com</p>
+</footer>
+</body>
+
+<script>{
+    //表单显示
+    function reg() {
+        document.getElementById('regform').style.display="";
+        document.getElementById('logform').style.display="none";
+    }
+    function log() {
+        document.getElementById('regform').style.display="none";
+        document.getElementById('logform').style.display="";
+    }
+}
+</script>
+</html>
