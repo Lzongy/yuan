@@ -24,7 +24,7 @@
 }
 .user_moving{
     width: 80%;
-    height: 1000px;
+    height: auto;
     margin: 10px auto;
 }
 .about{
@@ -71,17 +71,52 @@
 .infodesc{
     width: 200px;
     height: 35px;
-    background: #6495ED;
+    background: #a1c4fd;
     color: white;
     font-size: 17px;
     text-align: center;
     margin: 0 100px;
     position: relative;
     transition: all 0.5s;
+    border: 1px;
+    border-radius: 10px;
 }
 .infodesc:hover{
     transform:translate(calc(-10% + 5px), calc(-10% - 5px));
     box-shadow:-10px 10px 0 rgba(0,0,0,0.2);
+}
+#stories{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 5px 0;
+}
+.storytxt{
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    width: 300px;
+    height: 230px;
+    border: 1px;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+.storytxt:hover{
+    box-shadow: 5px 3px 3px #6495ED;
+}
+audio{
+    width: 60%;
+    height: 30px;
+    margin: -7px 10px;
+}
+.audiobtn{
+    width: auto;
+    height: 35px;
+    border:1px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    background: #f1f3f4;
 }
 /*底部链接*/
 footer a{
