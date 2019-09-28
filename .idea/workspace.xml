@@ -2,11 +2,44 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="treeHole" />
+      <artifact name="hopeless" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d98f43e-b590-47fb-82e8-210d678480f6" name="Default Changelist" comment="" />
+    <list default="true" id="1d98f43e-b590-47fb-82e8-210d678480f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/mobie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/icons/milogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/stories.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/3.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/4.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/5.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/6.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/7.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/hopeless/hopeless.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/treeHole.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hopeless.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/feedback_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/feedback_form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/pic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/square.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/vistor.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vistor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/guangchang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_alter.html" beforeDir="false" afterPath="$PROJECT_DIR$/info_alter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/treeHole/treeHole.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Squaremoving.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Visitormoving.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/upload_pic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/psd_alter.html" beforeDir="false" afterPath="$PROJECT_DIR$/psd_alter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/square.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/userinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userpic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vistor.html" beforeDir="false" afterPath="$PROJECT_DIR$/vistor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wishes.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishes.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +106,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/userinfo.html" root0="SKIP_INSPECTION" />
@@ -94,9 +130,14 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1OXXDRG5kbo1G9zk8JMwAG0hpRQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/img/background" />
@@ -104,22 +145,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="duplicates.index" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img/background" />
-      <recent name="$PROJECT_DIR$/../../Library/CloudStorage/iCloud Drive/Documents" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/music" />
       <recent name="$PROJECT_DIR$/img/icons" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/img/background" />
-      <recent name="$PROJECT_DIR$/img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/background" />
+      <recent name="$PROJECT_DIR$/../../Library/CloudStorage/iCloud Drive/Documents" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,11 +280,28 @@
       <workItem from="1568703621317" duration="10315000" />
       <workItem from="1568891320231" duration="775000" />
       <workItem from="1568958309483" duration="10470000" />
-      <workItem from="1569244976105" duration="189000" />
+      <workItem from="1569244976105" duration="2763000" />
+      <workItem from="1569325240087" duration="34206000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
