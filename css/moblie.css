@@ -1,36 +1,8 @@
 /*
 **iPhone设备
 */
-
-/* 游客访问 */
 @media only screen and (max-width: 320px) {
-    .about{
-        width: 100%;
-        height: auto;
-        display: flex;
-        display: -webkit-flex;
-        flex-wrap: wrap;
-    }
-    .titleDesc{
-        display: inline;
-        font-size: 10px;
-        width: 100%;
-        height: 50px;
-        text-align: left;
-        margin: auto;
-    }
-    .infodesc{
-        width: 80px;
-        height: 80px;
-        font-size: 14px;
-        margin:5px auto;
-        color: darkblue;    
-    }
-    audio{
-        margin: 15px 0;
-    }
-}
-@media only screen and (max-width: 414px){
+/* vistor */
     .about{
         width: 100%;
         height: auto;
@@ -52,14 +24,382 @@
         font-size: 14px;
         margin:5px auto;
         color: darkblue;
-
     }
     audio{
         margin: 15px 0;
     }
+    /* login */
+    .formsign{
+        width: 90%;
+        height: auto;
+        margin: 40px auto;
+    }
+    #logform{
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
+    #regform{
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+    }
+    #logform input[type=text],[type=password]{
+        width: 180px;
+        height: 25px;
+    }
+    #logform input[type=reset],button{
+        width: 70px;
+        height: 30px;
+    }
+    #regform input[type=reset],button{
+        width: 70px;
+        height: 30px;
+    }
+    #logform input[type=submit]{
+        width: 70px;
+        height: 30px;
+    }
+    #regform input[type=submit]{
+        width: 70px;
+        height: 30px;
+    }
+    #regform input[type=number]{
+        width: 60px;
+        height: 20px;
+    }
+    /* psd alter */
+    .psdinfo{
+        width: 95%;
+        height: auto;
+    }
+    .psdinfo input[type=submit]{
+        width: 70px;
+        height: 30px;
+        margin: 10px 5px;
+    }
+    .psdinfo input[type=reset]{
+        width: 70px;
+        height: 30px;
+        margin: 10px 5px;
+    }
+    .psdinfo button{
+        width: 80px;
+        height: 30px;
+        margin: 10px 5px;
+    }
+    /*
+    ** userinfo
+    */
+    /* logout */
+    #logout{
+        width:80%;
+        height: 260px;
+    }
+    #logout input[type=email]{
+        width:160px;
+        height: 25px;
+    }
+    /* feedback */
+    #feedback{
+        width:80%;
+        height: 250px;
+    }
+    #feedback textarea{
+        width: 80%;
+        height: 50%;
+    }
+    /*freed*/
+    #freed{
+        width: 90%;
+        height: 350px;
+    }
+    #freed textarea{
+        width: 90%;
+        height: 80%;
+    }
+    /* moving */
+    .moving{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .left_bar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 300px;
+    }
+    .left_items{
+        width:32%;
+        height: 30px;
+        margin: 2px auto;
+        font-size: 12px;
+    }
+    .contain{
+        width: 100%;
+        height:auto;
+        margin-top: -200px;
+    }
+    /* info alter*/
+    table{
+        width: 80%;
+        height: auto;
+    }
+    /* wishes */
+    .input{
+        width: 100%;
+        height: auto;
+    }
+    .input input[type=text]{
+        width: 100%;
+        height: 25px;
+        margin: 5px 0;
+    }
+    .notfinish{
+        width: 100%;
+        height: 350px;
+    }
+    .finish{
+        width: 100%;
+        height: 350px;
+    }
+    /* index */
+    .header{
+        width: 100%;
+        height: 300px;
+    }
+    .special{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .spe_items{
+        width: 170px;
+        height: auto;
+        margin: 20px auto;
+    }
+    .spe_items img{
+        width:170px;
+        height: 100px;
+    }
+    .aboutUs{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutdesc{
+        width: 100%;
+        height: auto;
+    }
+    .aboutpic{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 414px){
+    /* vistor */
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+    }
+    .titleDesc{
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        margin: auto;
+    }
+    .infodesc{
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+        margin:5px auto;
+        color: darkblue;
+    }
+    audio{
+        margin: 15px 0;
+    }
+    /* login */
+    .formsign{
+        width: 90%;
+        height: auto;
+        margin: 40px auto;
+    }
+    #logform{
+        width: 100%;
+        height: auto;
+        font-size: 15px;
+    }
+    #regform{
+        width: 100%;
+        height: auto;
+        font-size: 15px;
+    }
+    #logform input[type=text],[type=password]{
+        width: 180px;
+        height: 25px;
+    }
+    #logform button{
+        width: 70px;
+        height: 30px;
+    }
+    #regform button{
+        width: 70px;
+        height: 30px;
+    }
+    #logform input[type=submit],[type=reset]{
+        width: 70px;
+        height: 30px;
+    }
+    #regform input[type=submit],[type=reset]{
+        width: 70px;
+        height: 30px;
+    }
+    #regform input[type=number]{
+        width: 60px;
+        height: 20px;
+    }
+    /* psd alter */
+    .psdinfo{
+        width: 95%;
+        height: auto;
+    }
+    .psdinfo input[type=submit],[type=reset]{
+        width: 70px;
+        height: 30px;
+    }
+    .psdinfo button{
+        width: 80px;
+        height: 30px;
+    }
+    /*
+     **userinfo
+     */
+    /* logout */
+    #logout{
+        width: 80%;
+        height: 260px;
+    }
+    #logout input[type=email]{
+        width: 170px;
+        height: 25px;
+    }
+    /* feedback */
+    #feedback{
+        width: 80%;
+        height: 260px;
+    }
+    #feedback textarea{
+        width: 80%;
+        height: 50%;
+    }
+    /*freed*/
+    #freed{
+        width: 90%;
+        height: 350px;
+    }
+    #freed textarea{
+        width: 90%;
+        height: 80%;
+    }
+    /* moving */
+    .moving{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .left_bar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+        height: 300px;
+    }
+    .left_items{
+        width:32%;
+        height: 30px;
+        margin: 2px auto;
+        font-size: 14px;
+    }
+    .contain{
+        width: 95%;
+        height:auto;
+        margin-top: -200px;
+    }
+    /* info alter */
+    .user_profiles{
+        width: 95%;
+        height: auto;
+    }
+    #user_moving_contain{
+        width: 80%;
+        height: auto;
+        font-size: 17px;
+    }
+    /* wishes */
+    .input{
+        width: 100%;
+        height: auto;
+    }
+    .input input[type=text]{
+        width: 100%;
+        height: 25px;
+        margin: 5px 0;
+    }
+    .notfinish{
+        width: 100%;
+        height: 400px;
+    }
+    .finish{
+        width: 100%;
+        height: 400px;
+    }
+    /* index */
+    .header{
+        width: 100%;
+        height: 400px;
+    }
+    .special{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+    .spe_items{
+        width: 170px;
+        height: auto;
+        margin: 20px auto;
+    }
+    .spe_items img{
+        width:170px;
+        height: 100px;
+    }
+    .aboutUs{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aboutdesc{
+        width: 100%;
+        height: auto;
+    }
+    .aboutpic{
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
 }
 /* iPad设备 */
 @media only screen and (min-width:800px ) {
+    /* vistor */
     .titleDesc{
         font-size: 10px;
         width: 100%;
@@ -74,4 +414,21 @@
         margin: auto;
         color: darkblue;
     }
+    /* index */
+    .special{
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin: 10px 20px;
+    }
+    .spe_items{
+        width: 170px;
+        height: auto;
+        margin: 20px auto;
+    }
+    .spe_items img{
+        width:170px;
+        height: 100px;
+    }
+
 }
