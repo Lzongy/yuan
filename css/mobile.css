@@ -1,0 +1,79 @@
+/*
+**iPhone设备
+*/
+
+/* 游客访问 */
+@media only screen and (max-width: 320px) {
+    body{
+        z-index: 2;
+    }
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+    }
+    .titleDesc{
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        margin: auto;
+    }
+    .infodesc{
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+        margin: 10px 5px;
+        color: darkblue;
+    }
+    audio{
+        margin: 15px 0;
+    }
+}
+@media only screen and (max-width: 414px){
+    .about{
+        width: 100%;
+        height: auto;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+    }
+    .titleDesc{
+        display: inline;
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        margin: auto;
+    }
+    .infodesc{
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+        margin: 10px 5px;
+        color: darkblue;
+    }
+    audio{
+        margin: 15px 0;
+    }
+}
+/* iPad设备 */
+@media only screen and (min-width: 1024px)  {
+    .titleDesc{
+        font-size: 10px;
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        margin: auto;
+    }
+    .infodesc{
+        width: 170px;
+        height: 30px;
+        font-size: 17px;
+        margin: auto;
+        color: darkblue;
+    }
+}
