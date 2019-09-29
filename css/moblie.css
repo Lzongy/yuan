@@ -7,6 +7,10 @@
     body{
         z-index: 2;
     }
+    .head{background: #00000000;}
+    .user_moving{background: #00000000}
+    #movings{background: #00000000}
+    footer{background: #00000000}
     .about{
         width: 100%;
         height: auto;
@@ -26,14 +30,23 @@
         width: 80px;
         height: 80px;
         font-size: 14px;
-        margin: 10px 5px;
+        border: 1px cornflowerblue solid;
+        margin:5px auto;
         color: darkblue;
+        background: #00000000;
     }
     audio{
         margin: 15px 0;
     }
 }
 @media only screen and (max-width: 414px){
+    body{
+        z-index: 2;
+    }
+    .head{background: #00000000;}
+    .user_moving{background: #00000000}
+    #movings{background: #00000000}
+    footer{background: #00000000}
     .about{
         width: 100%;
         height: auto;
@@ -53,15 +66,17 @@
         width: 80px;
         height: 80px;
         font-size: 14px;
-        margin: 10px 5px;
+        margin:5px auto;
         color: darkblue;
+        border: 1px solid cornflowerblue;
+        background: #00000000;
     }
     audio{
         margin: 15px 0;
     }
 }
 /* iPad设备 */
-@media only screen and (min-width: 1024px)  {
+@media only screen and (min-width:800px ) {
     .titleDesc{
         font-size: 10px;
         width: 100%;
