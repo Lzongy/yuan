@@ -7,6 +7,7 @@
     <title>游客访问 / 无望社区</title>
     <link href="css/vistor.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <link href="css/moblie.css" rel="stylesheet" type="text/css"/>
     <script src="js/vue.js"></script>
 </head>
 <body>
@@ -44,7 +45,8 @@
         <h3 style="margin-top: 30px;color:#6CA6CD;">生活中有许多许多的暖心的事儿呢：</h3>
         <!-- 故事内容 -->
         <div id="stories">
-            <p v-for="txts in story" class="storytxt">{{txts.txt}}<br> <span style="float: right;color: #6495ED;background: #00000000"> {{txts.name}}</span></p>
+            <p v-for="txts in story" class="storytxt">{{txts.txt}}<br>
+                <span style="float: right;color: #6495ED;background: #00000000"> {{txts.name}}</span></p>
         </div>
     </div>
     </div>
