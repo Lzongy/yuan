@@ -4,13 +4,6 @@
 
 /* 游客访问 */
 @media only screen and (max-width: 320px) {
-    body{
-        z-index: 2;
-    }
-    .head{background: #00000000;}
-    .user_moving{background: #00000000}
-    #movings{background: #00000000}
-    footer{background: #00000000}
     .about{
         width: 100%;
         height: auto;
@@ -30,23 +23,14 @@
         width: 80px;
         height: 80px;
         font-size: 14px;
-        border: 1px cornflowerblue solid;
         margin:5px auto;
-        color: darkblue;
-        background: #00000000;
+        color: darkblue;    
     }
     audio{
         margin: 15px 0;
     }
 }
 @media only screen and (max-width: 414px){
-    body{
-        z-index: 2;
-    }
-    .head{background: #00000000;}
-    .user_moving{background: #00000000}
-    #movings{background: #00000000}
-    footer{background: #00000000}
     .about{
         width: 100%;
         height: auto;
@@ -68,8 +52,7 @@
         font-size: 14px;
         margin:5px auto;
         color: darkblue;
-        border: 1px solid cornflowerblue;
-        background: #00000000;
+
     }
     audio{
         margin: 15px 0;
