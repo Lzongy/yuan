@@ -75,40 +75,27 @@ nav li a:hover{
 	box-shadow:-10px 10px 0 rgba(0,0,0,0.2);
 }
 /*关于我们*/
-.intro{
+.aboutUs{
 	width: 100%;
-	height: auto;
+	height: 500px;
 	display: flex;
-	display: -webkit-flex;
-	margin: 20px auto;
 }
-.about_info{
-	width: 40%;
+.aboutdesc{
+	width: 50%;
 	height: auto;
-	margin: 0 20px;
-	color: #6495ED;
-	font-size: 16px;
+	margin: 10px 0;
+	color: cornflowerblue;
 }
-.about_info p ,li{
-	font-size: 17px;
+.aboutdesc  p,li{
+	margin: 10px 10px;
+}
+.aboutpic{
+	width: 50%;
+	height: auto;
 	margin: 10px 0;
 }
-.log button{
-	width:260px;
-	height: 60px;
-	border-radius: 9px;
-	border: 1px solid #6495ED;
-	font-size: 20px;
-	font-family: Kaiti;
-	background-color: #00000000;
-	margin: 20px 100px;
-	color: #6495ED;
-}
-.log button:hover{
-	border-color: white;
-	cursor: pointer;
-	background: #6495ED;
-	color: white;
+.aboutpic img{
+	margin: 10px 100px;
 }
 /*底部链接*/
 footer a{
