@@ -50,14 +50,14 @@ nav li a:hover{
 	border: 1px solid #6495ED;
 	border-radius: 10px;
 	width: auto;
-	height: auto;
-	margin: 0 150px;
+	height:auto;
+	margin: 0 100px;
 	position: relative;
 	transition: all 0.5s;
 }
 .spe_items img{
 	width: 170px;
-	height: 150px;
+	height: 160px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
