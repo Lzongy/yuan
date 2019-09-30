@@ -40,62 +40,105 @@ nav li a:hover{
 	padding: 0;
 	display: inline-block;
 }
-.special{
+.indexContainer{
 	width: 100%;
 	height: auto;
+	margin-top: 50px;
+	margin-bottom:30px ;
 	display: flex;
-	margin: 50px auto;
+	flex-wrap: wrap;
 }
-.spe_items{
+.icons{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	display: -webkit-flex;
+	margin: 20px 0;
+}
+.comments{
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
 	border: 1px solid #6495ED;
-	border-radius: 10px;
-	width: auto;
-	height:auto;
-	margin: 0 100px;
+	font-size: 17px;
+	color: white;
+	margin: 10px auto;
+	text-align: center;
 	position: relative;
 	transition: all 0.5s;
 }
-.spe_items img{
-	width: 170px;
-	height: 160px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-.pic_desc{
-	width: auto;
-	height: auto;
+.visit{
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	border: 1px solid #6495ED;
+	font-size: 17px;
 	color: white;
-	background: #6495ED;
+	margin: 10px auto;
 	text-align: center;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	position: relative;
+	transition: all 0.5s;
 }
-.spe_items:hover{
-	transform:translate(calc(-10% + 5px), calc(-10% - 5px));
-	box-shadow:-10px 10px 0 rgba(0,0,0,0.2);
+.liked{
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	border: 1px solid #6495ED;
+	font-size: 17px;
+	color: white;
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+	transition: all 0.5s;
+}
+.comments:hover{
+	transform: translateY(-10%);
+	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
+}
+.visit:hover{
+	transform: translateY(-10%);
+	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
+}
+.liked:hover{
+	transform: translateY(-10%);
+	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
+}
+.pic img{
+	width: 200px;
+	height: 170px;
+	border-top-right-radius:8px ;
+	border-top-left-radius: 8px;
+}
+.icondesc{
+	width: 100%;
+	height: 26px;
+	margin-top: -3px;
+	background: #a1c4fd;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 /*关于我们*/
-.aboutUs{
+.aboutus{
 	width: 100%;
-	height: 500px;
+	height: auto;
 	display: flex;
 }
 .aboutdesc{
 	width: 50%;
 	height: auto;
-	margin: 10px 0;
-	color: cornflowerblue;
+	margin: 15px 0;
+	color: #6495ED;
+	font-size: 17px;
+	font-family: Kaiti;
 }
-.aboutdesc  p,li{
-	margin: 10px 10px;
+.aboutdesc p,li{
+	margin: 10px 20px;
 }
-.aboutpic{
+.tologin{
 	width: 50%;
 	height: auto;
-	margin: 10px 0;
-}
-.aboutpic img{
-	margin: 10px 100px;
+	margin: 15px 0;
+	text-align: center;
 }
 /*底部链接*/
 footer a{
