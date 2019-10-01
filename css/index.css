@@ -35,7 +35,7 @@ nav li a:hover{
 	overflow: hidden;
 	background-size: 100% 100%;
 	width: 100%;
-	height: 550px;
+	height: 600px;
 	margin:0;
 	padding: 0;
 	display: inline-block;
@@ -92,6 +92,19 @@ nav li a:hover{
 	position: relative;
 	transition: all 0.5s;
 }
+.zone{
+	width: 200px;
+	height: 200px;
+	border-radius: 8px;
+	border: 1px solid #6495ED;
+	font-size: 17px;
+	color: white;
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+	transition: all 0.5s;
+}
+
 .comments:hover{
 	transform: translateY(-10%);
 	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
@@ -101,6 +114,10 @@ nav li a:hover{
 	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
 }
 .liked:hover{
+	transform: translateY(-10%);
+	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
+}
+.zone:hover{
 	transform: translateY(-10%);
 	box-shadow: -10px 10px 0 rgba(0,0,0,0.2);
 }
