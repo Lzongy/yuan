@@ -1,5 +1,5 @@
 /*
-**iPhone设备
+**iPhone,小米,华为设备  （320px / 414px ）
 */
 @media only screen and (max-width: 320px) {
 /* vistor */
@@ -44,7 +44,7 @@
         height: auto;
         font-size: 14px;
     }
-    #logform input[type=text],[type=password]{
+    #logform input[type=text],[tpe=password]{
         width: 180px;
         height: 25px;
     }
@@ -166,25 +166,57 @@
     /* index */
     .header{
         width: 100%;
-        height: 300px;
+        height: 260px;
     }
-    .special{
-        display: flex;
-        flex-wrap: wrap;
+    .indexContainer{
         width: 100%;
         height: auto;
-        margin: 10px 0;
+        margin-top: 50px;
+        margin-bottom:30px ;
+        display: flex;
+        flex-wrap: wrap;
     }
-    .spe_items{
-        width: 170px;
-        height: auto;
-        margin: 20px auto;
+    .icons{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
     }
-    .spe_items img{
-        width:170px;
+    .comments{
+        width: 110px;
         height: 100px;
+        font-size: 15px;
+        margin: 5px auto;
     }
-    .aboutUs{
+    .zone{
+        width: 110px;
+        height: 100px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    .visit{
+        width: 110px;
+        height: 100px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    .liked{
+        width: 110px;
+        height: 100px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    .pic img{
+        width: 110px;
+        height: 80px;
+    }
+    .icondesc{
+        width: 100%;
+        height: 20px;
+    }
+    .aboutus{
         width: 100%;
         height: auto;
         display: flex;
@@ -193,11 +225,18 @@
     .aboutdesc{
         width: 100%;
         height: auto;
+        font-size: 13px;
     }
-    .aboutpic{
+    .aboutdesc p,li{
+        margin: 10px 5px;
+    }
+    .tologin{
         width: 100%;
         height: auto;
-        margin: 0;
+    }
+    .tologin img{
+        width: auto;
+        height: 300px;
     }
 }
 @media only screen and (max-width: 414px){
@@ -363,38 +402,78 @@
     /* index */
     .header{
         width: 100%;
-        height: 300px;
+        height: 260px;
     }
-    .special{
+    .indexContainer{
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        margin-bottom:30px ;
         display: flex;
         flex-wrap: wrap;
+    }
+    .icons{
         width: 100%;
-        height: auto;
-        margin: 10px 0;
+        height: 400px;
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
     }
-    .spe_items{
-        width: 170px;
-        height: auto;
-        margin: 20px auto;
+    .comments{
+        width: 150px;
+        height: 140px;
+        font-size: 15px;
+        margin: 5px auto;
     }
-    .spe_items img{
-        width:170px;
-        height: 100px;
+    .visit{
+        width: 150px;
+        height: 140px;
+        font-size: 15px;
+        margin: 5px auto;
     }
-    .aboutUs{
+    .liked{
+        width: 150px;
+        height: 140px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    .zone{
+        width: 150px;
+        height: 140px;
+        font-size: 15px;
+        margin: 5px auto;
+    }
+    .pic img{
+        width: 150px;
+        height: 120px;
+    }
+    .icondesc{
+        width: 100%;
+        height: 20px;
+    }
+    .aboutus{
         width: 100%;
         height: auto;
         display: flex;
+        display: -webkit-flex;
         flex-wrap: wrap;
     }
     .aboutdesc{
         width: 100%;
         height: auto;
+        font-size: 15px;
     }
-    .aboutpic{
+    .tologin p,li{
+        margin: 5px 5px;
+    }
+    .tologin{
         width: 100%;
-        height: auto;
-        margin: 0;
+        height: 470px;
+    }
+    .tologin img{
+        width: auto;
+        height:300px;
     }
 }
 /* iPad设备 */
