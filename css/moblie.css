@@ -1,7 +1,7 @@
 /*
 **iPhone,小米,华为设备  （320px / 414px ）
 */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 310px) {
 /* vistor */
     .about{
         width: 100%;
@@ -20,7 +20,8 @@
     }
     .infodesc{
         width: 80px;
-        height: 80px;
+        height: 70px;
+        text-align: center;
         font-size: 14px;
         margin:5px auto;
         color: darkblue;
@@ -239,16 +240,17 @@
         height: 300px;
     }
 }
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 414px) {
     /* vistor */
-    .about{
+    .about {
         width: 100%;
         height: auto;
         display: flex;
         display: -webkit-flex;
         flex-wrap: wrap;
     }
-    .titleDesc{
+
+    .titleDesc {
         display: inline;
         font-size: 10px;
         width: 100%;
@@ -256,163 +258,197 @@
         text-align: left;
         margin: auto;
     }
-    .infodesc{
+
+    .infodesc {
         width: 80px;
-        height: 80px;
+        height: 70px;
+        text-align: center;
         font-size: 14px;
-        margin:5px auto;
+        margin: 5px auto;
         color: darkblue;
     }
-    audio{
+
+    audio {
         margin: 15px 0;
     }
+
     /* login */
-    .formsign{
+    .formsign {
         width: 90%;
         height: auto;
         margin: 40px auto;
     }
-    #logform{
+
+    #logform {
         width: 100%;
         height: auto;
         font-size: 15px;
     }
-    #regform{
+
+    #regform {
         width: 100%;
         height: auto;
         font-size: 15px;
     }
-    #logform input[type=text],[type=password]{
+
+    #logform input[type=text], [type=password] {
         width: 180px;
         height: 25px;
     }
-    #logform button{
+
+    #logform button {
         width: 70px;
         height: 30px;
     }
-    #regform button{
+
+    #regform button {
         width: 70px;
         height: 30px;
     }
-    #logform input[type=submit],[type=reset]{
+
+    #logform input[type=submit], [type=reset] {
         width: 70px;
         height: 30px;
     }
-    #regform input[type=submit],[type=reset]{
+
+    #regform input[type=submit], [type=reset] {
         width: 70px;
         height: 30px;
     }
-    #regform input[type=number]{
+
+    #regform input[type=number] {
         width: 60px;
         height: 20px;
     }
+
     /* psd alter */
-    .psdinfo{
+    .psdinfo {
         width: 95%;
         height: auto;
     }
-    .psdinfo input[type=submit],[type=reset]{
+
+    .psdinfo input[type=submit], [type=reset] {
         width: 70px;
         height: 30px;
     }
-    .psdinfo button{
+
+    .psdinfo button {
         width: 80px;
         height: 30px;
     }
+
     /*
      **userinfo
      */
     /* logout */
-    #logout{
+    #logout {
         width: 80%;
         height: 260px;
     }
-    #logout input[type=email]{
+
+    #logout input[type=email] {
         width: 170px;
         height: 25px;
     }
+
     /* feedback */
-    #feedback{
+    #feedback {
         width: 80%;
         height: 260px;
     }
-    #feedback textarea{
+
+    #feedback textarea {
         width: 80%;
         height: 50%;
     }
+
     /*freed*/
-    #freed{
+    #freed {
         width: 90%;
         height: 350px;
     }
-    #freed textarea{
+
+    #freed textarea {
         width: 90%;
         height: 80%;
     }
+
     /* moving */
-    .moving{
+    .moving {
         display: flex;
         flex-wrap: wrap;
     }
-    .left_bar{
+
+    .left_bar {
         display: flex;
         flex-wrap: wrap;
         width: 95%;
         height: 300px;
     }
-    .left_items{
-        width:32%;
+
+    .left_items {
+        width: 32%;
         height: 30px;
         margin: 2px auto;
         font-size: 14px;
     }
-    .contain{
+
+    .contain {
         width: 95%;
-        height:auto;
+        height: auto;
         margin-top: -200px;
     }
+
     /* info alter */
-    .user_profiles{
+    .user_profiles {
         width: 95%;
         height: auto;
     }
-    #user_moving_contain{
+
+    #user_moving_contain {
         width: 80%;
         height: auto;
         font-size: 17px;
     }
+
     /* wishes */
-    .input{
+    .input {
         width: 100%;
         height: auto;
     }
-    .input input[type=text]{
+
+    .input input[type=text] {
         width: 100%;
         height: 25px;
         margin: 5px 0;
     }
-    .notfinish{
+
+    .notfinish {
         width: 100%;
         height: 400px;
     }
-    .finish{
+
+    .finish {
         width: 100%;
         height: 400px;
     }
+
     /* index */
-    .header{
+    .header {
         width: 100%;
         height: 260px;
     }
-    .indexContainer{
+
+    .indexContainer {
         width: 100%;
         height: auto;
         margin-top: 50px;
-        margin-bottom:30px ;
+        margin-bottom: 30px;
         display: flex;
         flex-wrap: wrap;
     }
-    .icons{
+
+    .icons {
         width: 100%;
         height: 400px;
         display: flex;
@@ -420,60 +456,84 @@
         flex-wrap: wrap;
         margin: 20px 0;
     }
-    .comments{
+
+    .comments {
         width: 150px;
         height: 140px;
         font-size: 15px;
         margin: 5px auto;
     }
-    .visit{
+
+    .visit {
         width: 150px;
         height: 140px;
         font-size: 15px;
         margin: 5px auto;
     }
-    .liked{
+
+    .liked {
         width: 150px;
         height: 140px;
         font-size: 15px;
         margin: 5px auto;
     }
-    .zone{
+
+    .zone {
         width: 150px;
         height: 140px;
         font-size: 15px;
         margin: 5px auto;
     }
-    .pic img{
+
+    .pic img {
         width: 150px;
         height: 120px;
     }
-    .icondesc{
+
+    .icondesc {
         width: 100%;
         height: 20px;
     }
-    .aboutus{
+
+    .aboutus {
         width: 100%;
         height: auto;
         display: flex;
         display: -webkit-flex;
         flex-wrap: wrap;
     }
-    .aboutdesc{
+
+    .aboutdesc {
         width: 100%;
         height: auto;
         font-size: 15px;
     }
-    .tologin p,li{
+
+    .tologin p, li {
         margin: 5px 5px;
     }
-    .tologin{
+
+    .tologin {
         width: 100%;
         height: 470px;
     }
-    .tologin img{
+
+    .tologin img {
         width: auto;
-        height:300px;
+        height: 300px;
+    }
+    .darkTolight{
+        margin: 100px 0;
+    }
+    .dark{
+        width: 20px;
+        height: 100px;
+        margin: 0;
+    }
+    .light{
+        width: 20px;
+        height: 100px;
+        margin: 100px -20px;
     }
 }
 /* iPad设备 */
