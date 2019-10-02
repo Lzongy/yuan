@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/userinfo.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/moblie.css" type="text/css" />
+    <link href="css/moblie.css" type="text/css" rel="stylesheet" />
     <script src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript">
         //返回顶部
@@ -36,14 +36,49 @@
             }else if (hours>=6 && hours<11){
                 document.getElementById('helo').innerText="今天也是元气满满的一天";
             }else if(hours>=11 && hours<13){
-                document.getElementById('helo').innerText="中午好，午饭要吃饱";
+                document.getElementById('helo').innerText="中午好哟 :)";
             }else if(hours>=13 && hours<18){
-                document.getElementById('helo').innerText="下午好哟";
+                document.getElementById('helo').innerText="下午好哟 :)";
             }else if(hours>=18 && hours<23){
                 document.getElementById('helo').innerText="晚上好呀，娱乐一会吧";
             }else {
-                document.getElementById('helo').innerText="辛苦一天好好休息";
+                document.getElementById('helo').innerText="睡觉了，帮我关一下月亮";
             }
+        }
+        //darkmode
+        function dark() {
+            var d=confirm('黑夜模式为测试版，确认开启？')
+            if (d==true) {
+                document.getElementById('dark').style.border="1px solid";
+                document.getElementById('light').style.border="1px";//按钮边框
+                document.getElementById('user_pic').style.background = 'url(img/background/nightpic.jpg)';//个人背景
+                document.body.style.background = "black"; //页面背景色
+                document.getElementById('footer').style.color = "gray"; //页脚文本
+                var leftItems = document.getElementsByClassName('left_items');
+                leftItems[0].style.background="gray";
+                leftItems[1].style.background="gray";
+                leftItems[2].style.background="gray";
+                leftItems[3].style.background="gray";
+                leftItems[4].style.background="gray";
+                leftItems[5].style.background="gray";
+                leftItems[6].style.background="gray";
+                leftItems[7].style.background="gray";
+                leftItems[8].style.background="gray";
+                leftItems[9].style.background="gray";
+                //左侧功能项
+                document.getElementById('user').style.color="white"; //个人昵称
+                document.getElementById('usermsg').style.color="gray" //个人简介
+                document.getElementById('msgtxt').style.color="gray"; //个人简介修改
+                document.getElementById('movingtxt').style.color="white"; //动态文本域
+                document.getElementById('areaSt').style.background="lightgray"; //功能区域
+                document.getElementById('areaSec').style.background="lightgray"; //树洞区域
+            }
+            else{
+                //关闭alter
+            }
+        }
+        function light() {
+            window.location.reload();
         }
     </script>
     <title>个人中心</title>
@@ -52,20 +87,28 @@
 <nav>
     <ul>
         <li style="font-size: 23px;color: #6CA6CD"><img src="img/icons/pro_logo.png" height="40" width="40" align="top"/>个人中心</li>
-        <li class="nav_right"><a href="#" id="userout" onclick="logout()" style="color:red;">注销账号</a></li>
-        <li class="nav_right"><a href="php/userout.php">退出登录</a></li>
-        <li class="nav_right"><i id="helo" style="color: orange;font-size: large;margin: 0 10px"></i></li>
+        <li class="nav_right"></li>
+        <li class="nav_right"></li>
+        <li class="nav_right"><b id="helo" style="color: #6495ED;font-size: large;margin: 0 10px"></b></li>
     </ul>
 </nav>
+<div class="darkTolight">
+    <div class="dark" id="dark" onclick="dark()">
+        <p>黑夜模式</p>
+    </div>
+    <div class="light" id="light" onclick="light()">
+        <p>日间模式</p>
+    </div>
+</div>
 <!-- 个人中心 -->
-<div class="user_pic" >
+<div class="user_pic" id="user_pic">
     <div class="avatar">
         <img src="img/icons/log_head.png" width="100" height="100"/>
         <p id="user" style="background: #00000000;font-size: 19px;"></p>
-        <p  style="background: #00000000">个人简介：<span id="introduction" style="background: #00000000;color: darkblue"></span>&nbsp;&nbsp;&nbsp;<span><button type="button" class="alter_intro" onclick="alte()" >编辑</button></span></p>
+        <p id="usermsg" style="background: #00000000">个人简介：<span id="introduction" style="background: #00000000;color: darkblue"></span>&nbsp;&nbsp;&nbsp;<span><button type="button" class="alter_intro" onclick="alte()" >编辑</button></span></p>
         <div id="alter intro" style="display: none">
             <form action="php/upintro.php" method="post">
-            <input type="text" name="introduction" style="border-radius: 9px;border:1px solid white;background: #00000000" />
+            <input type="text" name="introduction" style="border-radius: 9px;border:1px solid white;background: #00000000" id="msgtxt" />
             <input type="submit" value="修改"  style="width: 50px;height: 20px;font-size: 13px">
             <input type="button" value="取消" onclick="fin()" style="width: 50px;height: 20px;font-size: 13px;border: 1px;border-radius: 9px;background: white">
         </form>
@@ -74,23 +117,24 @@
 </div>
 <div class="moving">
     <div class="left_bar">
-        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white ">功能项</div>
-        <div class="left_item"style="width: 85%;height: 30px;background: #accbee;margin: 15px auto;font-size: 18px;text-align: center;">
-        <a href="#" style="color: white;text-decoration: none;background: #00000000">个人动态</a></div>
-        <div class="left_items"><a href="wishes.html">Wishes-愿望</a></div>
-        <div class="left_items"><a href="info_alter.html">个人资料修改</a></div>
-        <div class="left_items"><a href="psd_alter.html">密码修改</a></div>
-        <div class="left_items"><a href="#" id="userfree" onclick="freed()">发泄会儿</a></div>
-        <div class="left_items"><a href=" https://www.facebook.com">Facebook</a></div>
-        <div class="left_items"><a href=" https://twitter.com">Twitter</a></div>
-        <div class="left_items"><a href=" https://weibo.com">Weibo</a></div>
-        <div class="left_items"><a href=" https://qzone.qq.com">QZone</a></div>
-        <div class="left_items"><a href="#" id="userfeed" onclick="advice()">信息反馈</a></div>
+        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white " id="areaSt">功能项</div>
+        <div class="left_items" ><a href="#">个人动态</a></div>
+        <div class="left_items" ><a href="wishes.html">Wishes-愿望</a></div>
+        <div class="left_items" ><a href="info_alter.html">个人资料修改</a></div>
+        <div class="left_items" ><a href="psd_alter.html">密码修改</a></div>
+        <div class="left_items" ><a href="#" id="userfree" onclick="freed()">发泄会儿</a></div>
+        <div class="left_items" ><a href="php/userout.php">退出登录</a></div>
+        <div class="left_items" ><a href="#" id="userout" onclick="logout()">注销账号</a></div>
+        <div class="left_items" ><a href=" https://www.facebook.com">Facebook</a></div>
+        <div class="left_items" ><a href=" https://twitter.com">Twitter</a></div>
+        <div class="left_items" ><a href=" https://weibo.com">Weibo</a></div>
+        <div class="left_items" ><a href=" https://qzone.qq.com">QZone</a></div>
+        <div class="left_items" ><a href="#" id="userfeed" onclick="advice()">信息反馈</a></div>
     </div>
     <div class="contain">
-        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white">树洞</div>
+        <div style="width: 100%;height: 30px;text-align: center;border-radius: 6px;border: 1px;background:#6495ED;margin-bottom: 20px;font-size: 20px;color:white" id="areaSec">树洞</div>
         <form action="php/usermoving.php" method="post">
-        <textarea maxlength="1000" rows="5" placeholder="碰到什么有趣的事吗？说点什么吧～" name="moving"></textarea>
+        <textarea maxlength="1000" rows="5" placeholder="碰到什么有趣的事吗？说点什么吧～" name="moving" id="movingtxt"></textarea>
         <div class="btn" style="float: right"> <input type="submit" name="submit" value="发布"><input type="reset" name="reset" value="清空"></div>
         </form>
         <div class="moving_items">
@@ -109,7 +153,7 @@
     </div>
     </div>
 </div>
-<footer>
+<footer id="footer">
     <hr size="1" color="#808080" width="100%">
     <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com&nbsp;&nbsp;｜&nbsp;&nbsp;<span id="pagecount" ></span></p>
 </footer>
