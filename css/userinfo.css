@@ -33,6 +33,39 @@ nav ul li a:hover{
     float: right;
     margin: 0 5px;
 }
+.darkTolight{
+    width: 80px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    margin: 350px 10px;
+}
+.darkTolight p{
+    margin: 9px auto;
+}
+.dark{
+    width: 100%;
+    height: 40%;
+    border: 1px;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    background: black;
+    margin:5px auto;
+}
+.light{
+    width: 100%;
+    height: 40%;
+    border: 1px solid #6495ED;
+    border-radius: 7px;
+    text-align: center;
+    color: #6495ED;
+    font-size: 13px;
+    background: white;
+    margin: 5px auto;
+}
 /*
 动态主体
 */
