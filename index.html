@@ -89,7 +89,7 @@
 				<span><img src="img/icons/qzone_icon.png" class="link_icon" /> <a href=" https://qzone.qq.com">QZone</a></span>
 				<span style="float:right;color: red;font-size: 15px;">注：本站所有图片元素来源<a href="http://www.51yuansu.com/ball/"><span style="margin: 3px 0;"><img src="img/icons/milogo.png" width="70px" height="25px" align="top" ></span></a></span>
 				</p> <br>
-		<p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com &nbsp;&nbsp;| &nbsp;<a href ="#" id="userfeed" onclick="advice()">反馈建议</a>&nbsp;&nbsp;｜&nbsp;&nbsp;<a href="php/version.php" style="color: darkblue;">查看版本</a>&nbsp;&nbsp;｜&nbsp;&nbsp;<span id="visit" style="color: darkblue"></span></p>
+        <p align="center">Copyright© 2019 无望/Hopeless 个人树洞&nbsp;&nbsp;｜&nbsp;&nbsp;邮箱地址：1060673403@qq.com &nbsp;&nbsp;| &nbsp;<a href ="#" id="userfeed" onclick="advice()">反馈建议</a>&nbsp;&nbsp;｜&nbsp;&nbsp;<span style="color: darkblue;">已经记录了:<span id="runtime"></span>的生活</span>&nbsp;&nbsp;｜&nbsp;&nbsp;<span id="visit" style="color: darkblue"></span></p>
 				</footer>
 
 		<!--feedback-->
@@ -124,6 +124,28 @@
                             document.getElementById('feedback').style.display="none";
 							document.getElementById('hidebg').style.display="none";
 						}
+						//时间记录
+                                function runTime() {
+                                    var d = new Date(), str = '';
+                                    BirthDay = new Date("August 05,2019");
+                                    today = new Date();
+                                    timeold = (today.getTime() - BirthDay.getTime());
+                                    sectimeold = timeold / 1000;
+                                    secondsold = Math.floor(sectimeold);
+                                    msPerDay = 24 * 60 * 60 * 1000;
+                                    msPerYear = 365 * 24 * 60 * 60 * 1000;
+                                    e_daysold = timeold / msPerDay;
+                                    e_yearsold = timeold / msPerYear;
+                                    daysold = Math.floor(e_daysold);
+                                    yearsold = Math.floor(e_yearsold);
+                                    str += daysold + "天";
+                                    str += d.getHours() + '时';
+                                    str += d.getMinutes() + '分';
+                                    str += d.getSeconds() + '秒';
+                                    return str;
+                                }
+                                setInterval(function () { $('#runtime').html(runTime()) }, 1000);
+
 						//访问次数
 								var caution=false
 								function setCookie(name,value,expires,path,domain,secure)
