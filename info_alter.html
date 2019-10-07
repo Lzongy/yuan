@@ -5,25 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/info_alter.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/moblie.css" type="text/css" />
+    <link href="css/moblie.css" rel="stylesheet" type="text/css" />
+    <script src="js/infoCheck.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-        //手机号校验
-        function checktel() {
-            var tel=document.getElementById('tele');
-            var ps=/^1[3|4|5|8][0-9]\d{4,8}$/;
-            if(!ps.test(tel.value)){
-                document.getElementById('telErr').innerText="无效手机号，请检查";
-            }
-        }
-        function telfouc() {
-            document.getElementById('telErr').innerText="";
-        }
-        function alter() {
-            document.getElementById('user_info_cotain').style.display="none";
-            document.getElementById('user_moving_contain').style.display="";
-        }
-    </script>
     <title>个人资料修改</title>
 </head>
 <body>
@@ -41,13 +25,13 @@
     <form action="php/alter.php" method="post">
         <table id="user_moving_contain">
             <tr>
-                <td class="desc">昵称：</td><td><input type="text" name="nickname" ></td>
+                <td class="desc">昵称：</td><td><input type="text" name="nickname" id="name" onblur="checkname()"  ></td>
             </tr>
             <tr>
                 <td class="desc">性别：</td><td><input type="radio" name="sex" value="男">男&nbsp;&nbsp;&nbsp;<input type="radio" name="sex" value="女">女</td>
             </tr>
             <tr>
-                <td class="desc">邮箱地址：</td><td><input type="email" name="email" id="email"></td>
+                <td class="desc">邮箱地址：</td><td><input type="email" name="email" id="email"  onblur="checkmail()" ></td>
             </tr>
             <tr>
                 <td class="desc">出生年月：</td><td><input type="number" name="yrs" max="2019" min="1970" id="year">年
