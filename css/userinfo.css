@@ -109,7 +109,8 @@ nav ul li a:hover{
 }
 .moving{
     width: 80%;
-    height: 1000px;
+    height: auto;!important;
+    min-height: 1000px;
     margin: 0 auto;
     display: flex;
     display: -webkit-flex;
